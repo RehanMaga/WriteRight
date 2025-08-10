@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WriteRight Therapist Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Inline critical CSS for faster loading */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+        
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 18px;
+            color: #64748b;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading" class="loading">
+        <div>
+            <i class="fas fa-spinner fa-spin" style="font-size: 24px; margin-right: 10px;"></i>
+            Loading WriteRight Dashboard...
+        </div>
+    </div>
+
+    <!-- Login Screen -->
+    <div id="loginScreen" class="hidden">
+        <div class="login-container">
+            <div class="login-left">
+                <div class="logo">
+                    <i class="fas fa-heart-pulse"></i>
+                    <span>WriteRight</span>
+                </div>
+                <h1>Empowering Recovery Through <span class="highlight">Digital Therapy</span></h1>
+                <p>Track patient progress, analyze drawing patterns, and provide personalized rehabilitation guidance with our comprehensive stroke recovery platform.</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Real-time progress monitoring</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-brain"></i>
+                        <span>AI-powered shape analysis</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <span>Comprehensive patient management</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="login-right">
+                <div class="login-form">
+                    <h2>Welcome Back</h2>
+                    <p>Sign in to your therapist dashboard to continue monitoring patient progress</p>
+                    
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="therapist@clinic.com" value="therapist@clinic.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="Enter your password" value="password123">
+                        </div>
+                        
+                        <button type="submit" class="login-btn">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Sign In
+                        </button>
+                    </form>
+                    
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div id="dashboard" class="hidden">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-heart-pulse"></i>
+                    <span>WriteRight</span>
+                </div>
+                <p>Therapist Portal</p>
+            </div>
+            
+            <div class="user-info">
+                <div class="user-avatar">DRF</div>
+                <div class="user-details">
+                    <h4>Dr. Rula Farah</h4>
+                    <p>Stroke Rehabilitation</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-page="overview">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" data-page="patients">
+                    <i class="fas fa-users"></i>
+                    <span>Patients</span>
+                    <span class="badge">6</span>
+                </a>
+                <a href="#" class="nav-item" data-page="analytics">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Analytics</span>
+                </a>
+                <a href="#" class="nav-item" data-page="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button class="logout-btn" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Sign Out
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search patients...">
+                </div>
+                <div class="header-actions">
+                    <button class="btn-secondary">
+                        <i class="fas fa-filter"></i>
+                        Filter
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-download"></i>
+                        Export
+                    </button>
+                    <button class="btn-primary">
+                        <i class="fas fa-calendar-plus"></i>
+                        Schedule
+                    </button>
+                </div>
+            </div>
+
+            <!-- Page Content -->
+            <div id="pageContent">
+                <!-- Content will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="charts.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
