@@ -14,7 +14,6 @@ This folder contains all **machine learning components** developed for the Write
 ### 2. Model Architectures
 - **CNN (Convolutional Neural Network)** – for image-based shape classification
 - **ResNet** – deeper convolutional model with skip connections for enhanced feature extraction
-- **Temporal CNN** – sequence-based model trained on raw `(x, y, t)` stroke data
 
 
 ### 3. Data Augmentation & Optimization
