@@ -1,20 +1,27 @@
-# WriteRight – Stroke Rehabilitation Drawing Feedback System
+# WriteRight – AI-Powered Stroke Rehabilitation System
 
-**B.Sc. Final Project – University of Haifa**  
-Team Members: Amir Diab, Rehan Maghamseh  
-Supervisor: Prof. Ilan Shamshoni  
-Clinical Advisor: Dr. Rola Farah
+WriteRight is an **AI-powered rehabilitation system** designed to **assess patient consciousness** and **enhance motor and handwriting skills** for stroke survivors.
 
----
+##  Features
+-  **Captures** patient-drawn predefined shapes using an iPad and Apple Pencil  
+-  **Analyzes** the drawings with CNN/ResNet deep learning models (TensorFlow, Core ML)  
+-  **Provides** real-time accuracy feedback and **tracks progress over time** to support personalized rehabilitation  
+-  **Includes a therapist-facing Web UI** for monitoring patient progress and session data
 
-## Overview
-WriteRight is an **AI-based rehabilitation system** designed to help stroke patients enhance their motor skills by practicing drawing predefined shapes.  
-The system:
-- Captures patient drawings
-- Analyzes them using **CNN/ResNet deep learning models**
-- Provides **real-time accuracy feedback** and long-term progress tracking
+##  Tech Stack
+- **Languages:** Python, Swift, JavaScript, HTML, CSS  
+- **Frameworks & Tools:** TensorFlow, Core ML, SwiftUI, PencilKit, React (or specify your frontend framework if used)  
+- **Platform:** iPadOS & Web
 
----
+##  Purpose
+The system supports therapists in **monitoring patient recovery**, improving fine motor skills, and **evaluating levels of consciousness** during rehabilitation exercises.
+
+##  Future Enhancements
+- Add personalized difficulty levels  
+- Expand shape library  
+- Integrate advanced analytics and reporting tools into the therapist dashboard
+
+
 
 This project is part of our B.Sc. final year work at the University of Haifa.
 All rights reserved © 2025.
